@@ -30,8 +30,10 @@ class CustomDrawer extends StatelessWidget {
             shrinkWrap: true,
             physics: const NeverScrollableScrollPhysics(),
             itemCount: drawerItems.length,
-            itemBuilder: (context, index) =>
-                DrawerItem(model: drawerItems[index])),
+            itemBuilder: (context, index) => Padding(
+                  padding: const EdgeInsets.only(top: 20.0),
+                  child: DrawerItem(model: drawerItems[index]),
+                )),
         const SizedBox(
           height: 8,
         ),
