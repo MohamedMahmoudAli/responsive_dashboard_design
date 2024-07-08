@@ -7,7 +7,6 @@ import 'package:responsive_dashboard/views/Widget/user_info_list_tile.dart';
 
 class CustomDrawer extends StatelessWidget {
   const CustomDrawer({super.key});
-  
 
   @override
   Widget build(BuildContext context) {
@@ -22,11 +21,29 @@ class CustomDrawer extends StatelessWidget {
           height: 8,
         ),
         DrawerItemsListView(),
-        SizedBox(
-          height: 8,
-        ),
+        Spacer(),
+        BottomDrawerList()
       ]),
     );
   }
 }
 
+class BottomDrawerList extends StatelessWidget {
+  const BottomDrawerList({super.key});
+  static const List<DraweItemModel> drawerItems = [
+    DraweItemModel(title: "Setting System", image: Assets.imagesSettings),
+    DraweItemModel(title: "Logout account", image: Assets.imagesLogout),
+  ];
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.only(top: 20),
+      child: ListView.builder(
+          shrinkWrap: true,
+          physics: const NeverScrollableScrollPhysics(),
+          itemCount: drawerItems.length,
+          itemBuilder: (context, index) =>
+              DrawerItem(model: drawerItems[index], isActive: true)),
+    );
+  }
+}
