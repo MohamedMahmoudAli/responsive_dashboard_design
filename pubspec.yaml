@@ -80,7 +80,10 @@ flutter:
   fonts:
     - family: Montserrat
       fonts:
+        - asset: assets\fonts\Montserrat-Regular.ttf
         - asset: assets\fonts\Montserrat-Medium.ttf
+        - Weight: 500
+        
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
