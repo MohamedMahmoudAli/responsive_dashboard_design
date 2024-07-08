@@ -34,19 +34,17 @@ class _DrawerItemsListViewState extends State<DrawerItemsListView> {
         itemCount: drawerItems.length,
         itemBuilder: (context, index) => GestureDetector(
               onTap: () {
-                if(activeIndex!=index){
+                if (activeIndex != index) {
                   setState(() {
-                  activeIndex = index;
-                });
+                    activeIndex = index;
+                  });
                 }
-                
-                
               },
               child: Padding(
                 padding: const EdgeInsets.only(top: 20.0),
                 child: DrawerItem(
                   model: drawerItems[index],
-                  isActive: true,
+                  isActive: activeIndex == index,
                 ),
               ),
             ));
