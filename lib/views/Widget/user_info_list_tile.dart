@@ -7,6 +7,7 @@ class UserInfoListTile extends StatelessWidget {
   final String title;
   final String image;
   final String subtitle;
+  
 
   @override
   Widget build(BuildContext context) {
