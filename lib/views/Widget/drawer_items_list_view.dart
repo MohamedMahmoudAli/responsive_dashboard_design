@@ -28,9 +28,9 @@ class _DrawerItemsListViewState extends State<DrawerItemsListView> {
         title: "My Investments", image: Assets.imagesMyInvestments),
   ];
   Widget build(BuildContext context) {
-    return ListView.builder(
-        shrinkWrap: true,
-        physics: const NeverScrollableScrollPhysics(),
+    return SliverList.builder(
+        // shrinkWrap: true,
+        // physics: const NeverScrollableScrollPhysics(),
         itemCount: drawerItems.length,
         itemBuilder: (context, index) => GestureDetector(
               onTap: () {
