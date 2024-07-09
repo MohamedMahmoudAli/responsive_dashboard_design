@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:responsive_dashboard/models/drawer_item_model.dart';
-import 'package:responsive_dashboard/utils/app_style.dart';
 import 'package:responsive_dashboard/views/Widget/active_drawer_item.dart';
 import 'package:responsive_dashboard/views/Widget/in_active_drawer_item.dart';
 

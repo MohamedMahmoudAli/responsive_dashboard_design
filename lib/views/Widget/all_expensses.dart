@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
-import 'package:responsive_dashboard/utils/app_images.dart';
-import 'package:responsive_dashboard/utils/app_style.dart';
-import 'package:responsive_dashboard/views/Widget/all_expensses_header.dart';
+import 'all_expensses_header.dart';
+import 'package:responsive_dashboard/views/Widget/all_expensses_item.dart';
 
 class AllExpensses extends StatelessWidget {
   const AllExpensses({super.key});
@@ -15,8 +13,8 @@ class AllExpensses extends StatelessWidget {
           color: Colors.white,
           shape:
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(12))),
-      child: Column(
-        children: [AllExpenssesHeader()],
+      child: const Column(
+        children: [AllExpenssesHeader(), AllExpenssesItem()],
       ),
     );
   }

@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
-import 'package:responsive_dashboard/utils/app_images.dart';
 import 'package:responsive_dashboard/utils/app_style.dart';
 import 'package:responsive_dashboard/views/Widget/range_options.dart';
 

@@ -1,4 +1,3 @@
-import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:responsive_dashboard/models/drawer_item_model.dart';
@@ -15,7 +14,6 @@ class DrawerItemsListView extends StatefulWidget {
 }
 
 class _DrawerItemsListViewState extends State<DrawerItemsListView> {
-  @override
   int activeIndex = 0;
   final List<DraweItemModel> drawerItems = [
     const DraweItemModel(title: "Dashboard", image: Assets.imagesDashboard),
@@ -27,6 +25,8 @@ class _DrawerItemsListViewState extends State<DrawerItemsListView> {
     const DraweItemModel(
         title: "My Investments", image: Assets.imagesMyInvestments),
   ];
+
+  @override
   Widget build(BuildContext context) {
     return SliverList.builder(
         // shrinkWrap: true,
