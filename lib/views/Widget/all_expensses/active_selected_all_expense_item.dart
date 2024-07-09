@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:responsive_dashboard/models/all_expensses_item_model.dart';
 import 'package:responsive_dashboard/utils/app_style.dart';
@@ -27,27 +26,35 @@ class SelectedAllExpenseItem extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          AllExpensseItemHeader(image: allExpenssesItemModel.image),
+          AllExpensseItemHeader(
+            image: allExpenssesItemModel.image,
+            imageBackGroundColor: Colors.white.withOpacity(0.10000000149011612),
+            iconColor: Colors.white,
+            imageColor: Colors.white,
+          ),
           const SizedBox(
             height: 34,
           ),
           Text(
             allExpenssesItemModel.title,
-            style: AppStyles.styleMedium16(context),
+            style:
+                AppStyles.styleMedium16(context).copyWith(color: Colors.white),
           ),
           const SizedBox(
             height: 8,
           ),
           Text(
             allExpenssesItemModel.date,
-            style: AppStyles.styleRegular14(context),
+            style: AppStyles.styleRegular14(context)
+                .copyWith(color: const Color(0XFFFAFAFA)),
           ),
           const SizedBox(
             height: 16,
           ),
           Text(
             allExpenssesItemModel.amount,
-            style: AppStyles.styleSemiBold24(context),
+            style: AppStyles.styleSemiBold24(context)
+                .copyWith(color: Colors.white),
           )
         ],
       ),
