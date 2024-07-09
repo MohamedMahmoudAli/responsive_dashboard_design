@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dashboard/models/all_expensses_item_model.dart';
 import 'package:responsive_dashboard/utils/app_style.dart';
-import 'package:responsive_dashboard/views/Widget/all_expensse_item_header.dart';
+import 'package:responsive_dashboard/views/Widget/all_expensses/all_expensse_item_header.dart';
 
 class AllExpenssesItem extends StatelessWidget {
   const AllExpenssesItem({super.key, required this.allExpenssesItemModel});
