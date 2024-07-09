@@ -19,7 +19,8 @@ class AllExpensseItemHeader extends StatelessWidget {
             height: 35,
           ),
         ),
-        const Spacer(),
+        
+        // const Spacer(),
         Transform.rotate(
             angle: -1.57079633 * 2,
             child: const Icon(
