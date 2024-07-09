@@ -10,6 +10,7 @@ class AllExpensses extends StatelessWidget {
   Widget build(BuildContext context) {
     return const CustomBackgroundContainer(
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           AllExpenssesHeader(),
           SizedBox(
@@ -21,5 +22,3 @@ class AllExpensses extends StatelessWidget {
     );
   }
 }
-
-
