@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_dashboard/models/all_expensses_item_model.dart';
 import 'package:responsive_dashboard/utils/app_images.dart';
 import 'package:responsive_dashboard/views/Widget/all_expensse_item_header.dart';
 
 class AllExpenssesItem extends StatelessWidget {
-  const AllExpenssesItem({super.key});
+  const AllExpenssesItem({super.key, required this.allExpenssesItemModel});
+    final AllExpenssesItemModel allExpenssesItemModel;
+
 
   @override
   Widget build(BuildContext context) {
@@ -17,8 +20,9 @@ class AllExpenssesItem extends StatelessWidget {
                 color: Color(0xFFF1F1F1),
               ),
               borderRadius: BorderRadius.circular(12))),
-      child: const Column(
-        children: [AllExpensseItemHeader(image: Assets.imagesWalletAccount)],
+      child:  Column(
+        children: [
+          AllExpensseItemHeader(image: allExpenssesItemModel.image),],
       ),
     );
   }

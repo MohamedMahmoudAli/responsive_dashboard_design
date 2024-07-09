@@ -8,9 +8,25 @@ class AllExpensseItemHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CircleAvatar(
-      backgroundColor: const Color(0XFFFAFAFA),
-      child: SvgPicture.asset(Assets.imagesWalletAccount),
+    return Row(
+      children: [
+        CircleAvatar(
+          radius: 30,
+          backgroundColor: const Color(0XFFFAFAFA),
+          child: SvgPicture.asset(
+            Assets.imagesWalletAccount,
+            width: 35,
+            height: 35,
+          ),
+        ),
+        const Spacer(),
+        Transform.rotate(
+            angle: -1.57079633 * 2,
+            child: const Icon(
+              Icons.arrow_back_ios_new,
+              color: Color(0xFF064061),
+            ))
+      ],
     );
   }
 }
