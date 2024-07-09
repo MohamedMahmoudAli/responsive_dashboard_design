@@ -9,6 +9,7 @@ class AllExpensseItemHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CircleAvatar(
+      backgroundColor: const Color(0XFFFAFAFA),
       child: SvgPicture.asset(Assets.imagesWalletAccount),
     );
   }
