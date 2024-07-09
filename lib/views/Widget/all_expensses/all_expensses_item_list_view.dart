@@ -27,14 +27,27 @@ class AllExpenssesItemListView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
         children: itemModel.asMap().entries.map((e) {
-      return Expanded(
-        child: Padding(
-          padding: e.key == 1
-              ? const EdgeInsets.symmetric(horizontal: 12.0)
-              : const EdgeInsets.all(0),
-          child: AllExpenssesItem(allExpenssesItemModel: e.value),
-        ),
-      );
+      if (e.key == 1) {
+        return Expanded(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 12.0),
+            child: AllExpenssesItem(
+              allExpenssesItemModel: e.value,
+              isSelected: false,
+            ),
+          ),
+        );
+      } else {
+        return Expanded(
+          child: Padding(
+            padding: const EdgeInsets.all(0),
+            child: AllExpenssesItem(
+              allExpenssesItemModel: e.value,
+              isSelected: true,
+            ),
+          ),
+        );
+      }
     }).toList());
   }
 }
