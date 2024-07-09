@@ -28,8 +28,7 @@ class SelectedAllExpenseItem extends StatelessWidget {
         children: [
           AllExpensseItemHeader(
             image: allExpenssesItemModel.image,
-            imageBackGroundColor: Colors.white.withOpacity(0.10000000149011612),
-            iconColor: Colors.white,
+            imageBackground: Colors.white.withOpacity(0.10000000149011612),
             imageColor: Colors.white,
           ),
           const SizedBox(

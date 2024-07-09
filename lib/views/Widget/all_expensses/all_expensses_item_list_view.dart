@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 import 'package:responsive_dashboard/models/all_expensses_item_model.dart';
 import 'package:responsive_dashboard/utils/app_images.dart';
@@ -5,23 +6,6 @@ import 'package:responsive_dashboard/views/Widget/all_expensses/all_expensses_it
 
 class AllExpenssesItemListView extends StatefulWidget {
   const AllExpenssesItemListView({super.key});
-  static List<AllExpenssesItemModel> itemModel = [
-    AllExpenssesItemModel(
-        image: Assets.imagesBalance,
-        title: "Blance",
-        date: " April 20, 2022",
-        amount: r"$20.123"),
-    AllExpenssesItemModel(
-        image: Assets.imagesIncome,
-        title: "Income",
-        date: " April 20, 2022",
-        amount: r"$20.123"),
-    AllExpenssesItemModel(
-        image: Assets.imagesExpenses,
-        title: "Expense",
-        date: " April 20, 2022",
-        amount: r"$20.123"),
-  ];
 
   @override
   State<AllExpenssesItemListView> createState() =>
@@ -29,52 +13,96 @@ class AllExpenssesItemListView extends StatefulWidget {
 }
 
 class _AllExpenssesItemListViewState extends State<AllExpenssesItemListView> {
-  int activeIndex = 0;
+ final items = [
+     AllExpenssesItemModel(
+        image: Assets.imagesBalance,
+        title: 'Balance',
+        date: 'April 2022',
+        amount: r'$20,129'),
+     AllExpenssesItemModel(
+        image: Assets.imagesIncome,
+        title: 'Income',
+        date: 'April 2022',
+        amount: r'$20,129'),
+     AllExpenssesItemModel(
+        image: Assets.imagesExpenses,
+        title: 'Expenses',
+        date: 'April 2022',
+        amount: r'$20,129'),
+  ];
+
+  int selectedIndex = 0;
   @override
   Widget build(BuildContext context) {
+    // return Row(
+    //   children: [
+    //     Expanded(
+    //       child: GestureDetector(
+    //         onTap: () {
+    //           updateIndex(0);
+    //         },
+    //         child: AllExpenssesItem(
+    //           isSelected: selectedIndex == 0,
+    //           allExpenssesItemModel: items[0],
+    //         ),
+    //       ),
+    //     ),
+    //     const SizedBox(
+    //       width: 8,
+    //     ),
+    //     Expanded(
+    //       child: GestureDetector(
+    //         onTap: () {
+    //           updateIndex(1);
+    //         },
+    //         child: AllExpenssesItem(
+    //           isSelected: selectedIndex == 1,
+    //           allExpenssesItemModel: items[1],
+    //         ),
+    //       ),
+    //     ),
+    //     const SizedBox(
+    //       width: 8,
+    //     ),
+    //     Expanded(
+    //       child: GestureDetector(
+    //         onTap: () {
+    //           updateIndex(2);
+    //         },
+    //         child: AllExpenssesItem(
+    //           isSelected: selectedIndex == 2,
+    //           allExpenssesItemModel: items[2],
+    //         ),
+    //       ),
+    //     )
+    //   ],
+    // );
     return Row(
-        children: AllExpenssesItemListView.itemModel.asMap().entries.map((e) {
-      if (e.key == 1) {
+      // children: items.map((e) => AllExpensessItem(itemModel: e)).toList(),
+      children: items.asMap().entries.map((e) {
+        int index = e.key;
+        var item = e.value;
         return Expanded(
           child: GestureDetector(
             onTap: () {
-              setState(() {
-                updateIndex(activeIndex);
-              });
+              updateIndex(index);
             },
             child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 12.0),
+              padding: EdgeInsets.symmetric(horizontal: index == 1 ? 12 : 0),
               child: AllExpenssesItem(
-                allExpenssesItemModel: e.value,
-                isSelected: activeIndex == e.key ? true : false,
+                isSelected: selectedIndex == index,
+                allExpenssesItemModel: item,
               ),
             ),
           ),
         );
-      } else {
-        return Expanded(
-          child: GestureDetector(
-            onTap: () {
-              setState(() {
-                updateIndex(activeIndex);
-              });
-            },
-            child: Padding(
-              padding: const EdgeInsets.all(0),
-              child: AllExpenssesItem(
-                allExpenssesItemModel: e.value,
-                isSelected: activeIndex == e.key ? true : false,
-              ),
-            ),
-          ),
-        );
-      }
-    }).toList());
+      }).toList(),
+    );
   }
 
-  void updateIndex(int activeIndex) {
+  void updateIndex(int index) {
     setState(() {
-      activeIndex = activeIndex;
+      selectedIndex = index;
     });
   }
 }
