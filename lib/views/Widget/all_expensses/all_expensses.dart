@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dashboard/views/Widget/all_expensses/all_expensses_item_list_view.dart';
-import 'package:responsive_dashboard/views/Widget/all_expensses/custom_background_container.dart';
+import 'package:responsive_dashboard/views/Widget/custom_background_container.dart';
 import 'all_expensses_header.dart';
 
 class AllExpensses extends StatelessWidget {
