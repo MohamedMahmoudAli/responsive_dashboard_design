@@ -4,14 +4,16 @@ import 'package:responsive_dashboard/models/user_info_model.dart';
 import 'package:responsive_dashboard/utils/app_style.dart';
 
 class UserInfoListTile extends StatelessWidget {
-  const UserInfoListTile( 
-      {super.key, required this.model,  
-     });
-  
-final UserInfoModel model;
+  const UserInfoListTile({
+    super.key,
+    required this.model,
+  });
+
+  final UserInfoModel model;
   @override
   Widget build(BuildContext context) {
     return Card(
+      margin: const EdgeInsets.all(0),
       color: const Color(0xFFFAFAFA),
       elevation: 0,
       child: ListTile(
@@ -23,7 +25,7 @@ final UserInfoModel model;
         title: Column(
           children: [
             Text(
-             model.title,
+              model.title,
               style: AppStyles.styleSemiBold16(context),
             ),
             Text(
