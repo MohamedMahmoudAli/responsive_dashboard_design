@@ -4,6 +4,7 @@ import 'package:responsive_dashboard/views/Widget/custom_background_container.da
 import 'package:responsive_dashboard/views/Widget/quick_invoice/custom_textfield.dart';
 import 'package:responsive_dashboard/views/Widget/quick_invoice/latest_transaction.dart';
 import 'package:responsive_dashboard/views/Widget/quick_invoice/quick_invoice_header.dart';
+import 'package:responsive_dashboard/views/Widget/quick_invoice/title_test_field.dart';
 
 class QuickInvoice extends StatelessWidget {
   const QuickInvoice({super.key});
@@ -11,15 +12,18 @@ class QuickInvoice extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const CustomBackgroundContainer(
-        child: Column(
-      children: [
-        QuickInvoiceHeader(),
-        LatestTransaction(),
-        Divider(
-          height: 48,
-        ),
-        SizedBox(height: 20, child: CustomTextField())
-      ],
+        child: SingleChildScrollView(
+      child: Column(
+        children: [
+          QuickInvoiceHeader(),
+          LatestTransaction(),
+          Divider(
+            height: 48,
+            color: Color(0xffF1F1F1),
+          ),
+          TitleTextField(title: "Customer name", hint: "Tyoe Customer Name")
+        ],
+      ),
     ));
   }
 }
