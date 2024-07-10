@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_dashboard/utils/app_style.dart';
 import 'package:responsive_dashboard/views/Widget/custom_background_container.dart';
+import 'package:responsive_dashboard/views/Widget/quick_invoice/latest_transaction.dart';
 import 'package:responsive_dashboard/views/Widget/quick_invoice/quick_invoice_header.dart';
 
 class QuickInvoice extends StatelessWidget {
@@ -7,6 +9,10 @@ class QuickInvoice extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const CustomBackgroundContainer(child: QuickInvoiceHeader());
+    return const CustomBackgroundContainer(
+        child: Column(
+      children: [QuickInvoiceHeader(), LatestTransaction()],
+    ));
   }
 }
+
