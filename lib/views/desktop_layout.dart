@@ -22,6 +22,9 @@ class DesktopLayout extends StatelessWidget {
           child: SingleChildScrollView(
             child: Column(
               children: [
+                SizedBox(
+                  height: 40,
+                ),
                 AllExpensses(),
                 SizedBox(
                   height: 24,
