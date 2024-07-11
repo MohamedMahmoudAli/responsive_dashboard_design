@@ -18,14 +18,17 @@ class DesktopLayout extends StatelessWidget {
         ),
         Expanded(
           flex: 3,
-          child: Column(
-            children: [
-              AllExpensses(),
-              SizedBox(
-                height: 24,
-              ),
-              QuickInvoice()
-            ],
+          // todo: implement desktop layout
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                AllExpensses(),
+                SizedBox(
+                  height: 24,
+                ),
+                QuickInvoice()
+              ],
+            ),
           ),
         ),
         Column()
