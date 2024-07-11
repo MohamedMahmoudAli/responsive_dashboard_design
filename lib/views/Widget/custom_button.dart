@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:responsive_dashboard/utils/app_style.dart';
 
 class CustomButton extends StatelessWidget {
-  const CustomButton({super.key, this.backgroundColor, required this.title});
-  final Color? backgroundColor; 
+  const CustomButton({super.key, this.backgroundColor, required this.title, this.textColor});
+  final Color? backgroundColor,textColor; 
   final String title;
 
   @override
@@ -21,7 +21,9 @@ class CustomButton extends StatelessWidget {
           onPressed: () {},
           child: Text(
             title,
-            style: AppStyles.styleSemiBold18(context),
+            style: AppStyles.styleSemiBold18(context).copyWith(
+              color: textColor
+            ),
           )),
     );
   }
