@@ -17,21 +17,45 @@ class MyCard extends StatelessWidget {
             shape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
             color: const Color(0XFF4EB7F2)),
-        child: Column(children: [
-          ListTile(
-            contentPadding: const EdgeInsets.only(right: 42, left: 31, top: 16),
-            title: Text(
-              "Name Card",
-              style: AppStyles.styleRegular16(context)
-                  .copyWith(color: Colors.white),
-            ),
-            subtitle: Text(
-              "Syah Bandi",
-              style: AppStyles.styleMedium20(context),
-            ),
-            trailing: SvgPicture.asset(Assets.imagesGallery),
-          )
-        ]),
+        child: Column(
+            children: [
+              ListTile(
+                contentPadding:
+                    const EdgeInsets.only(right: 42, left: 31, top: 16),
+                title: Text(
+                  "Name Card",
+                  style: AppStyles.styleRegular16(context)
+                      .copyWith(color: Colors.white),
+                ),
+                subtitle: Text(
+                  "Syah Bandi",
+                  style: AppStyles.styleMedium20(context),
+                ),
+                trailing: SvgPicture.asset(Assets.imagesGallery),
+              ),
+              const Spacer(),
+              Padding(
+                padding: const EdgeInsets.only(right: 24),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  children: [
+                    Text(
+                      "0965 6756 4484 5326",
+                      style: AppStyles.styleSemiBold24(context)
+                          .copyWith(color: Colors.white),
+                    ),
+                    Text(
+                      "12/20 -124",
+                      style: AppStyles.styleRegular16(context)
+                          .copyWith(color: Colors.white),
+                    ),
+                  ],
+                ),
+              ),
+              const SizedBox(
+                height: 26,
+              )
+            ]),
       ),
     );
   }
