@@ -1,4 +1,3 @@
-import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:responsive_dashboard/utils/app_style.dart';
@@ -21,7 +20,6 @@ class _MyCardsState extends State<MyCards> {
 
     pageController.addListener(() {
       currentIndex = pageController.page!.round();
-      log(currentIndex.toString());
       setState(() {});
     });
 
