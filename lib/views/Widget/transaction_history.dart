@@ -19,6 +19,9 @@ class TransactionHistory extends StatelessWidget {
           style: AppStyles.styleMedium16(context)
               .copyWith(color: const Color(0XFFAAAAAA)),
         ),
+        const SizedBox(
+          height: 16,
+        ),
         const TransactionHistroyListView()
       ],
     );
