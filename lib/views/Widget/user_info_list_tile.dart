@@ -6,35 +6,35 @@ import 'package:responsive_dashboard/utils/app_style.dart';
 class UserInfoListTile extends StatelessWidget {
   const UserInfoListTile({
     super.key,
-    required this.model,
+     required this.userInfoModel,
   });
 
-  final UserInfoModel model;
+  final UserInfoModel userInfoModel;
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(right: 8.0),
-      child: Card(
-        // margin: const EdgeInsets.all(0),
-        color: const Color(0xFFFAFAFA),
-        elevation: 0,
+    return Card(
+      color: const Color(0xFFFAFAFA),
+      elevation: 0,
+      child: Center(
         child: ListTile(
           leading: SvgPicture.asset(
-            model.image,
-            width: 100,
-            height: 100,
+            userInfoModel.image,
           ),
-          title: Column(
-            children: [
-              Text(
-                model.title,
-                style: AppStyles.styleSemiBold16(context),
-              ),
-              Text(
-                model.subTiitle,
-                style: AppStyles.styleRegular12(context),
-              ),
-            ],
+          title: FittedBox(
+            fit: BoxFit.scaleDown,
+            alignment: AlignmentDirectional.centerStart,
+            child: Text(
+              userInfoModel.title,
+              style: AppStyles.styleSemiBold16(context),
+            ),
+          ),
+          subtitle: FittedBox(
+            fit: BoxFit.scaleDown,
+            alignment: AlignmentDirectional.centerStart,
+            child: Text(
+              userInfoModel.subTiitle,
+              style: AppStyles.styleRegular12(context),
+            ),
           ),
         ),
       ),

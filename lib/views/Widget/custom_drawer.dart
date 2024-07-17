@@ -17,7 +17,7 @@ class CustomDrawer extends StatelessWidget {
       child: const CustomScrollView(slivers: [
         SliverToBoxAdapter(
           child: UserInfoListTile(
-            model: UserInfoModel(
+            userInfoModel: UserInfoModel(
                 title: "Madrina Andi",
                 subTiitle: "MAdrinadi20@gmail",
                 image: Assets.imagesAvatar1),

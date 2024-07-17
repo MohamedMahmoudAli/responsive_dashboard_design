@@ -26,7 +26,8 @@ class LatestTransactionListView extends StatelessWidget {
       scrollDirection: Axis.horizontal,
       child: Row(
           children: items
-              .map((e) => IntrinsicWidth(child: UserInfoListTile(model: e)))
+              .map((e) =>
+                  IntrinsicWidth(child: UserInfoListTile(userInfoModel: e)))
               .toList()),
       //  [
       //   ListView.builder(
