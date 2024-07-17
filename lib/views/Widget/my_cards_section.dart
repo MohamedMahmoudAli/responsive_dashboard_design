@@ -23,7 +23,6 @@ class _MyCardsState extends State<MyCards> {
       currentPageIndex = pageController.page!.round();
       setState(() {});
     });
-    // TODO: implement initState
     super.initState();
   }
 
