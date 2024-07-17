@@ -12,17 +12,18 @@ class MyCards extends StatefulWidget {
 }
 
 class _MyCardsState extends State<MyCards> {
-  late PageController pageController;
-  late int currentIndex = 0;
+   late PageController pageController;
+  int currentPageIndex = 0;
+
   @override
   void initState() {
     pageController = PageController();
 
     pageController.addListener(() {
-      currentIndex = pageController.page!.round();
+      currentPageIndex = pageController.page!.round();
       setState(() {});
     });
-
+    // TODO: implement initState
     super.initState();
   }
 
@@ -34,7 +35,7 @@ class _MyCardsState extends State<MyCards> {
         SizedBox(
           width: 420,
           child: Text(
-            "MY Card",
+            'My card',
             style: AppStyles.styleSemiBold20(context),
           ),
         ),
@@ -48,8 +49,8 @@ class _MyCardsState extends State<MyCards> {
           height: 20,
         ),
         DotsIndicator(
-          activeIndex: currentIndex,
-        )
+          activeIndex: currentPageIndex,
+        ),
       ],
     );
   }

@@ -8,24 +8,15 @@ class AllExpensesAndQuickInvoice extends StatelessWidget {
   });
 
   @override
-  Widget build(BuildContext context) {
-    return const Expanded(
-      flex: 2,
-      // todo: implement desktop layout
-      child: SingleChildScrollView(
-        child: Column(
-          children: [
-            SizedBox(
-              height: 40,
-            ),
-            AllExpensses(),
-            SizedBox(
-              height: 24,
-            ),
-            QuickInvoice()
-          ],
+ Widget build(BuildContext context) {
+    return const Column(
+      children: [
+        AllExpensses(),
+        SizedBox(
+          height: 24,
         ),
-      ),
+        QuickInvoice(),
+      ],
     );
   }
 }

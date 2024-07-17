@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_dashboard/views/Widget/all_expenses_and_quick_invoice.dart';
 import 'package:responsive_dashboard/views/Widget/custom_drawer.dart';
+import 'package:responsive_dashboard/views/Widget/mobile_layout.dart';
 
 class TabletLayout extends StatelessWidget {
   const TabletLayout({super.key});
 
   @override
-  Widget build(BuildContext context) {
+   Widget build(BuildContext context) {
     return const Row(
       children: [
         Expanded(child: CustomDrawer()),
@@ -14,10 +14,11 @@ class TabletLayout extends StatelessWidget {
           width: 32,
         ),
         Expanded(
+            flex: 3,
             child: Padding(
-          padding: EdgeInsets.only(top: 40),
-          child: AllExpensesAndQuickInvoice(),
-        )),
+              padding: EdgeInsets.only(top: 40),
+              child: MobileLayout(),
+            )),
         SizedBox(
           width: 32,
         ),
