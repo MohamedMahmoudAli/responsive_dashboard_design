@@ -30,23 +30,32 @@ class InSelectedAllExpenseItem extends StatelessWidget {
           const SizedBox(
             height: 34,
           ),
-          Text(
-            allExpenssesItemModel.title,
-            style: AppStyles.styleMedium16(context),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              allExpenssesItemModel.title,
+              style: AppStyles.styleMedium16(context),
+            ),
           ),
           const SizedBox(
             height: 8,
           ),
-          Text(
-            allExpenssesItemModel.date,
-            style: AppStyles.styleRegular14(context),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              allExpenssesItemModel.date,
+              style: AppStyles.styleRegular14(context),
+            ),
           ),
           const SizedBox(
             height: 16,
           ),
-          Text(
-            allExpenssesItemModel.amount,
-            style: AppStyles.styleSemiBold24(context),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              allExpenssesItemModel.amount,
+              style: AppStyles.styleSemiBold24(context),
+            ),
           )
         ],
       ),

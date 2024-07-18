@@ -34,26 +34,37 @@ class SelectedAllExpenseItem extends StatelessWidget {
           const SizedBox(
             height: 34,
           ),
-          Text(
-            allExpenssesItemModel.title,
-            style:
-                AppStyles.styleMedium16(context).copyWith(color: Colors.white),
+          FittedBox(
+            fit:BoxFit.scaleDown,
+            child: Text(
+              allExpenssesItemModel.title,
+              style:
+                  AppStyles.styleMedium16(context).copyWith(color: Colors.white),
+            ),
           ),
           const SizedBox(
             height: 8,
           ),
-          Text(
-            allExpenssesItemModel.date,
-            style: AppStyles.styleRegular14(context)
-                .copyWith(color: const Color(0XFFFAFAFA)),
+          FittedBox(
+                        fit:BoxFit.scaleDown,
+
+            child: Text(
+              allExpenssesItemModel.date,
+              style: AppStyles.styleRegular14(context)
+                  .copyWith(color: const Color(0XFFFAFAFA)),
+            ),
           ),
           const SizedBox(
             height: 16,
           ),
-          Text(
-            allExpenssesItemModel.amount,
-            style: AppStyles.styleSemiBold24(context)
-                .copyWith(color: Colors.white),
+          FittedBox(
+                        fit:BoxFit.scaleDown,
+
+            child: Text(
+              allExpenssesItemModel.amount,
+              style: AppStyles.styleSemiBold24(context)
+                  .copyWith(color: Colors.white),
+            ),
           )
         ],
       ),
