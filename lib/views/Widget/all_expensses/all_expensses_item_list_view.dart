@@ -119,27 +119,6 @@ class _AllExpenssesItemListViewState extends State<AllExpenssesItemListView> {
         )
       ],
     );
-    return Row(
-      // children: items.map((e) => AllExpensessItem(itemModel: e)).toList(),
-      children: items.asMap().entries.map((e) {
-        int index = e.key;
-        var item = e.value;
-        return Expanded(
-          child: GestureDetector(
-            onTap: () {
-              updateIndex(index);
-            },
-            child: Padding(
-              padding: EdgeInsets.symmetric(horizontal: index == 1 ? 12 : 0),
-              child: AllExpenssesItem(
-                isSelected: selectedIndex == index,
-                allExpenssesItemModel: item,
-              ),
-            ),
-          ),
-        );
-      }).toList(),
-    );
   }
 
   void updateIndex(int index) {
